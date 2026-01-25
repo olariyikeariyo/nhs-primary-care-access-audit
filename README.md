@@ -1,2 +1,2 @@
-# uk-healthcare-readmissions-analytics
-Healthcare analytics project analyzing CMS hospital readmissions data to identify high-risk conditions, penalty drivers and quality improvement opportunities.
+# uk-emergency-admissions-prevention-analysis
+Data analysis of avoidable emergency admissions across England assessing variation by region and GP practice and estimating potential cost and capacity savings through targeted prevention.
