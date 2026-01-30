@@ -1,62 +1,69 @@
-# uk-emergency-admissions-prevention-analysis
+# NHS Primary Care Access Audit
 
 ## Overview
-This project examines avoidable emergency admissions across England with a focus on conditions that should be manageable through effective primary and community care.  
-The analysis supports commissioners and system leaders in targeting prevention activity to reduce emergency pressure and cost.
+An audit of patient access to GP services across England using GP Patient Survey data. The analysis focuses on phone access and appointment satisfaction at Integrated Care Board (ICB) level.
 
 ## Problem Statement
-Emergency admissions place sustained pressure on NHS capacity and finances. A significant proportion are classified as avoidable yet rates vary widely across regions indicating inconsistent prevention effectiveness. Without clear insight into where and why avoidable admissions occur investment decisions remain reactive leading to higher costs poorer outcomes and increased service strain.
+Difficulty accessing GP appointments is a major driver of patient dissatisfaction and downstream system pressure. There is significant variation in reported access across ICBs, suggesting uneven operational performance.
 
 ## Stakeholders
-- NHS England / ICS leadership
-- Trust operational teams
-- Commissioners
+- NHS England
+- Integrated Care System leadership
+- GP practice managers
+- Primary care commissioners
 - Patients and public
 
 ## Key Questions
-- Which conditions drive the highest volume of avoidable emergency admissions?
-- How do admission rates vary by region and GP practice?
-- What is the estimated cost and capacity impact of reducing avoidable admissions?
+- Which ICBs perform below the national average for phone access?
+- How does phone access relate to appointment satisfaction?
+- Are there consistent regional patterns of underperformance?
 
 ## Data Sources
-- Dataset name – provider
-- Time period
-- Coverage and limitations
+- **GP Patient Survey – Practice Level Data** (NHS England)  
+- **Time period:** Latest published survey year  
+- **Coverage and limitations:** Self-reported survey data. One row per GP practice. Does not capture appointment supply or call handling capacity.
 
 ## Approach
 - Data ingestion and cleaning
-- Exploratory analysis
-- Feature engineering
-- Analysis or modelling method
-- Validation and sense-checks
+- Aggregation from practice to ICB level
+- Benchmarking against national averages
+- Identification of underperforming ICBs
+- Comparative analysis of phone access and appointment satisfaction
 
 ## Key Findings
-- Finding 1 with short explanation
-- Finding 2
-- Finding 3
+- Multiple ICBs underperform the national average for phone access
+- Poor phone access frequently aligns with lower appointment satisfaction
+- Performance variation suggests operational drivers rather than patient demographics alone
 
 ## Visual Outputs
-Describe charts dashboards or tables included.
-Reference notebooks or apps.
+- ICB benchmark bar charts for phone access  
+- Scatter plot of phone access vs appointment satisfaction  
+- Summary tables of underperforming ICBs  
+(See `/notebooks` and `/outputs`)
 
 ## Delivery Considerations
-- Data quality issues and assumptions
-- Risks and mitigations
-- Constraints and trade-offs
+- Survey response bias may affect absolute values
+- Results assume comparability across regions
+- Digital access channels are not included
 
 ## Recommendations
-Actionable recommendations framed for decision-makers.
-Prioritised where possible.
+- Prioritise call-handling improvements in lowest-performing ICBs
+- Share operational best practice from high-performing regions
+- Monitor access metrics alongside satisfaction indicators
 
 ## Impact
-What would change if these recommendations were acted on.
-Operational financial or patient impact.
+Improved access to GP services could increase patient satisfaction, reduce repeat contacts, and ease pressure on urgent care services.
 
 ## Tools Used
-Python pandas numpy matplotlib seaborn SQL VSCode
+Python pandas numpy matplotlib seaborn VSCode
 
 ## How to Run
-Steps to reproduce analysis locally.
+1. Clone the repository  
+2. Install dependencies using `pip install -r requirements.txt`  
+3. Place source data in `data/raw`  
+4. Run `python run.py`
 
 ## Next Steps
-What you would do with more time data or access.
+- Extend analysis across multiple survey years
+- Incorporate appointment volume data
+- Include digital access measures
